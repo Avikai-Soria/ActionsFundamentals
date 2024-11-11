@@ -1,18 +1,9 @@
-name: Custom Workflow
-
 on:
   push:
-    branches:
-      - main
-    # This prevents the workflow from running when files in the .github folder are modified
-    paths-ignore:
-      - '.github/**'
-
+    branches: [ main ]
+    paths-ignore: [.github/**]
   pull_request:
-    branches: 
-      - main
-
+    branches: [ main ]
   schedule:
-    - cron: '15 6 * * 0'  # Every Sunday at 6:15 UTC
-
-  workflow_dispatch:  # Manually triggered
+    - cron: '15 6 * * 0'
+  workflow_dispatch:
